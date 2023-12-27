@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
+import { Link, useNavigate } from "react-router-dom";
 import style from "./Register.module.css";
 // import WlcmLodr from "./WlcmLodr";
 
@@ -9,7 +9,7 @@ const Register = () => {
   // const [fstName,setFstName]=useState('')
   // const [lstName,setLstName]=useState('')
   const [details, setDetails] = useState({});
-
+  const navigate=useNavigate();
   const handleChange = (e) => {
     const { name, value } = e.target;
     setDetails({ ...details, [name]: value });
@@ -21,7 +21,10 @@ const Register = () => {
       "https://unusual-calf-threads.cyclic.app/users/register",
       details
     );
+  
     console.log(res);
+    alert("Register successfully")
+    navigate("/login")
     // localStorage.setItem("token", res.data.tokenID);
   };
   
@@ -83,16 +86,15 @@ const Register = () => {
         <div>
           <label htmlFor="gender">Gender*</label>
           <br />
-          <input
-            type="text"
-            placeholder="Enter Your Gender"
-            required
-            maxLength={8}
-            name="gender"
-            onChange={handleChange}
-          />
+          <select name={"gender"} onChange={handleChange}   required>
+           <option value="">Select Gender</option>
+           <option value="Male">Male</option>
+           <option value="Female">Female</option>
+           <option value="Other">Other</option>
+          </select>
+         
         </div>
-        <button onClick={handleRegister}>Register</button>
+        <button style={{backgroundColor:"red",color:'white'}} onClick={handleRegister}>Register</button>
         <br />
         <span>
           Already Registered,

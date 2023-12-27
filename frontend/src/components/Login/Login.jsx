@@ -58,8 +58,8 @@ const Login = () => {
           />
         </div>
         <div className={styles.btncontainer}>
-          <button onClick={handleLogin}>Login</button>
-          <button >
+          <button style={{backgroundColor:"red",color:'white'}} onClick={handleLogin}>Login</button>
+          <button style={{backgroundColor:"red",color:'white'}}>
             <Link to="/register">Register</Link>
           </button>
         </div>

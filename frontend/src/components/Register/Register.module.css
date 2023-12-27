@@ -31,10 +31,16 @@ box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;}
 }
 
 input {
-    padding: 7px;
-    font-size: 14px;
-    margin-left: 10px;
+   padding: 7px;
+
     width: 75%;
+    border: 1px solid rgb(81, 79, 79);
+    font-size: 16px;
+    border-radius: 10px;
+}
+select{
+    width: 75%; 
+    border: 1px solid rgb(81, 79, 79);
 }
 
 button {
@@ -42,14 +48,14 @@ button {
     width: 10vw;
     font-size: 20px;
     font-weight: bold;
-    background-color: #08A9E4;
-    color: #003380;
+    color: #ffffff;
     padding: 7px;
     font-family: 'Times New Roman', Times, serif;
     font-style: Times;
     border-radius: 10px;
     margin-top: 5%;
     margin-left: 30%;
+    border: 1px solid rgb(0, 0, 0);
 
 }
 
